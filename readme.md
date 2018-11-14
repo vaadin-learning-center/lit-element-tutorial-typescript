@@ -1,6 +1,6 @@
 # LitElement tutorial
 
-Code for the fifth part of a tutorial series on building apps with LitElement. This part covers offline use and PWA.
+TypeScript version of the finished LitElement tutorial app.
 
 You can find the text and video tutorials here:
 TODO add link
