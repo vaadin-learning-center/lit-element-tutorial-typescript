@@ -10,7 +10,7 @@ import {
 import { VisibilityFilters } from '../models/visibility-filters';
 import { State } from '../models/state';
 
-export const reducer = (state = new State(), action: Actions) => {
+export const reducer = (state = new State(), action: Actions): State => {
   switch (action.type) {
     case ADD_TODO:
       return {
