@@ -7,7 +7,7 @@ import {
   CLEAR_COMPLETED,
   Actions
 } from './actions';
-import { VisibilityFilters } from '../models/visibility-filters';
+import { VisibilityFilter } from '../models/visibility-filter';
 import { State } from '../models/state';
 
 export const reducer = (state = new State(), action: Actions): State => {
@@ -49,9 +49,9 @@ export const getVisibleTodosSelector = createSelector(
   getFilterSelector,
   (todos, filter) => {
     switch (filter) {
-      case VisibilityFilters.SHOW_ACTIVE:
+      case VisibilityFilter.SHOW_ACTIVE:
         return todos.filter(todo => !todo.complete);
-      case VisibilityFilters.SHOW_COMPLETED:
+      case VisibilityFilter.SHOW_COMPLETED:
         return todos.filter(todo => todo.complete);
       default:
         return todos;

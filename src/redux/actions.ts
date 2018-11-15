@@ -1,6 +1,6 @@
 import nanoid from 'nanoid';
 import { Todo } from '../models/todo';
-import { VisibilityFilters } from '../models/visibility-filters';
+import { VisibilityFilter } from '../models/visibility-filter';
 export const ADD_TODO = 'ADD_TODO';
 export const UPDATE_TODO_STATUS = 'UPDATE_TODO_STATUS';
 export const UPDATE_FILTER = 'UPDATE_FILTER';
@@ -21,7 +21,7 @@ export class UpdateTodoAction {
 
 export class UpdateFilterAction {
   readonly type = UPDATE_FILTER;
-  constructor(public filter: VisibilityFilters) {}
+  constructor(public filter: VisibilityFilter) {}
 }
 
 export class ClearCompletedAction {

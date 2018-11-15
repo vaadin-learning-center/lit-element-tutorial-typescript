@@ -8,7 +8,7 @@ import { getVisibleTodosSelector } from '../redux/reducer';
 import { connect } from 'pwa-helpers';
 import { store } from '../redux/store';
 import { Todo } from '../models/todo';
-import { VisibilityFilters } from '../models/visibility-filters';
+import { VisibilityFilter } from '../models/visibility-filter';
 import { State } from '../models/state';
 import {
   AddTodoAction,
@@ -91,7 +91,7 @@ class TodoView extends connect(store)(LitElement) {
         @value-changed="${this.filterChanged}"
       >
         ${
-          Object.values(VisibilityFilters).map(
+          Object.values(VisibilityFilter).map(
             filter => html`
               <vaadin-radio-button value="${filter}"
                 >${filter}</vaadin-radio-button
@@ -127,7 +127,7 @@ class TodoView extends connect(store)(LitElement) {
     store.dispatch(new UpdateTodoAction(updatedTodo, complete));
   }
 
-  filterChanged(e: { detail: { value: VisibilityFilters } }) {
+  filterChanged(e: { detail: { value: VisibilityFilter } }) {
     store.dispatch(new UpdateFilterAction(e.detail.value));
   }
 

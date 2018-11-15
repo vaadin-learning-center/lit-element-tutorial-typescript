@@ -1,9 +1,9 @@
 import { Todo } from './todo';
-import { VisibilityFilters } from './visibility-filters';
+import { VisibilityFilter } from './visibility-filter';
 
 export class State {
   constructor(
     public todos: Todo[] = [],
-    public filter: VisibilityFilters = VisibilityFilters.SHOW_ALL
+    public filter: VisibilityFilter = VisibilityFilter.SHOW_ALL
   ) {}
 }
