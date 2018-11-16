@@ -1,4 +1,4 @@
-import { LitElement, html, property } from '@polymer/lit-element';
+import { html, property } from '@polymer/lit-element';
 import '@vaadin/vaadin-text-field';
 import '@vaadin/vaadin-button';
 import '@vaadin/vaadin-checkbox';
@@ -16,8 +16,9 @@ import {
   UpdateFilterAction,
   ClearCompletedAction
 } from '../redux/actions';
+import { BaseView } from './base-view';
 
-class TodoView extends connect(store)(LitElement) {
+class TodoView extends connect(store)(BaseView) {
   @property()
   private todos: Todo[];
   @property()

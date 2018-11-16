@@ -1,16 +1,17 @@
-import { LitElement, html, property } from '@polymer/lit-element';
+import { html, property } from '@polymer/lit-element';
 import { connect } from 'pwa-helpers';
 import { store } from '../redux/store';
 import { statsSelector } from '../redux/reducer';
 import '@vaadin/vaadin-charts';
 import { State } from '../models/state';
+import { BaseView } from './base-view';
 
 interface ChartConfig {
   name: string;
   y: number;
 }
 
-class StatsView extends connect(store)(LitElement) {
+class StatsView extends connect(store)(BaseView) {
   @property()
   private chartConfig: ChartConfig[];
   private hasTodos: boolean = false;
