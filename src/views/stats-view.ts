@@ -1,4 +1,4 @@
-import { html, property } from '@polymer/lit-element';
+import { html, property } from 'lit-element';
 import { connect } from 'pwa-helpers';
 import { store } from '../redux/store';
 import { statsSelector } from '../redux/reducer';

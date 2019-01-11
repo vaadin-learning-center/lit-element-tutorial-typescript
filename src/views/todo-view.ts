@@ -1,4 +1,4 @@
-import { html, property } from '@polymer/lit-element';
+import { html, property } from 'lit-element';
 import '@vaadin/vaadin-text-field';
 import '@vaadin/vaadin-button';
 import '@vaadin/vaadin-checkbox';
